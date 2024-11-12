@@ -59,10 +59,9 @@ spec:
         - name: operation
           value: create
         - name: tags
-          value: 'origin=konflux,owner=$(context.pipelineRun.name)'
+          value: 'cicd=konflux,pipelinerun=$(context.pipelineRun.name)'
+  finally:
     - name: decommission-windows
-      runAfter:
-        - provision-windows
       taskRef:
         resolver: git
         params:
