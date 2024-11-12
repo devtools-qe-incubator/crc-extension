@@ -5,7 +5,9 @@ metadata:
   name: e2e-windows
 spec:
   description: |
-    An integration test which provisions a windows desktop machine to run e2e.
+    An integration test which provisions a windows desktop machine to run e2e. 
+
+    We need an azure account and a az blob to store the state of the infra.
 
   params:
     - name: SNAPSHOT 
