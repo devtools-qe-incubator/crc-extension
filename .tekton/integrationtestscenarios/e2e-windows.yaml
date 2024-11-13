@@ -38,7 +38,7 @@ spec:
   tasks:
     - name: init
       taskSpec:
-        description: Task to create / manage data used across the pipeline
+        description: create correlation for the pipelinerun
         results:
           - name: correlation
         steps:
