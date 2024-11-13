@@ -58,6 +58,12 @@ spec:
           value: $(tasks.init.results.correlation)
         - name: operation
           value: create
+        - name: ownerKind
+          value: 'PipelineRun'
+        - name: ownerName
+          value: $(context.pipelineRun.name)
+        - name: ownerUid
+          value: $(context.pipelineRun.uid)
         - name: tags
           value: 'cicd=konflux,pipelinerun=$(context.pipelineRun.name)'
   finally:
@@ -78,5 +84,9 @@ spec:
           value: $(tasks.init.results.correlation)
         - name: operation
           value: destroy
-        - name: host-access-secret
-          value: $(tasks.provision-windows.results.host-access-secret)
+        - name: ownerKind
+          value: 'PipelineRun'
+        - name: ownerName
+          value: $(context.pipelineRun.name)
+        - name: ownerUid
+          value: $(context.pipelineRun.uid)
